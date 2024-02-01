@@ -20,7 +20,7 @@ public class PlatformManager : MonoBehaviour
         if (Time >= maxTime)
         {
             Debug.Log("Creating Platform");
-            spaceBetween = Random.Range(-3,3);
+            spaceBetween = Random.Range(-1,2);
             Instantiate(platformPrefab, new Vector3(startPoint.transform.position.x + spaceBetween, Random.Range(minY, maxY), 0), Quaternion.identity ,transform.parent);
             Time = 0;
         } else
