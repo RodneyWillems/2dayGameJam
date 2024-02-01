@@ -9,16 +9,19 @@ public class PlatformManager : MonoBehaviour
     [SerializeField] GameObject platformPrefab;
     [SerializeField] int maxTime;
     [SerializeField] int Time;
+    [SerializeField] int spaceBetween;
+
     [SerializeField] float maxY;
     [SerializeField] float minY;
+
 
     void FixedUpdate()
     {
         if (Time >= maxTime)
         {
             Debug.Log("Creating Platform");
-            
-            Instantiate(platformPrefab, new Vector3(startPoint.transform.position.x, Random.Range(minY, maxY), 0), Quaternion.identity ,transform.parent);
+            spaceBetween = Random.Range(-3,3);
+            Instantiate(platformPrefab, new Vector3(startPoint.transform.position.x + spaceBetween, Random.Range(minY, maxY), 0), Quaternion.identity ,transform.parent);
             Time = 0;
         } else
         {
