@@ -5,32 +5,25 @@ using UnityEngine;
 
 public class Randombutton : MonoBehaviour
 {
-
     public static KeyCode Pushkey;
 
     private void Start()
     {
-        Generatekey();  
+        Generatekey(); 
     }
-
-
 
     private void FixedUpdate()
     {
-
-     if (Input.GetKeyDown(Pushkey))
+        if (Input.GetKeyDown(Pushkey))
         {
-            Debug.Log("keys been pressed");
+            Debug.Log("Key has been pressed");
+            Generatekey(); 
         }
-
-
-
-
     }
-
 
     private void Generatekey()
     {
+      
         Pushkey = (KeyCode)UnityEngine.Random.Range((int)KeyCode.A, (int)KeyCode.Z + 1);
         Debug.Log("Random key code: " + Pushkey);
     }
