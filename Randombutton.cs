@@ -12,7 +12,7 @@ public class Randombutton : MonoBehaviour
         Generatekey(); 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(Pushkey))
         {
