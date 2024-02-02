@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Randombutton.cs" />
     <Compile Include="Assets\Scripts\PlatfromScript.cs" />
     <Compile Include="Assets\Scripts\PlatformManager.cs" />
+    <Compile Include="Assets\Scripts\SpikeBall.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
